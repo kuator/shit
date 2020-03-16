@@ -89,7 +89,7 @@ end
 local function create_favourites_file()
 
   clear_wildignore()
-  local favi = vim.api.nvim_call_function('findfile', {'plugin/favi.vim'})
+  local favi = vim.api.nvim_call_function('findfile', {'favi/plugin/favi.vim'})
   restore_wildignore()
   local favourites = vim.api.nvim_call_function('substitute', {
     get_directory(favi),
@@ -98,7 +98,7 @@ local function create_favourites_file()
     ''
   })
 
-  vim.api.nvim_command('silent! botright 10 sp' .. favourites)
+  vim.api.nvim_command('silent! botright 10 sp ' .. favourites)
 
   local vimrc = vim.api.nvim_call_function('expand', {
     vim.api.nvim_call_function('getenv', {'MYVIMRC'})
