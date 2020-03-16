@@ -17,7 +17,7 @@ local function get_favourites_location()
   local upath =  vim.api.nvim_get_option('path')
   local rtp = vim.api.nvim_get_option('runtimepath')
   vim.api.nvim_set_option('path', rtp)
-  favourites = vim.api.nvim_call_function('findfile', {'favourites'})
+  favourites = vim.api.nvim_call_function('findfile', {'favi'})
   vim.api.nvim_set_option('path', upath)
   restore_wildignore()
   return favourites
@@ -45,7 +45,7 @@ local function add()
   })
 
   favourites_window_id=vim.api.nvim_call_function('bufwinnr' ,{
-    'favourites'
+    'favi'
   })
 
   if favourites_window_id ~= -1 then
@@ -94,7 +94,7 @@ local function create_favourites_file()
   local favourites = vim.api.nvim_call_function('substitute', {
     get_directory(favi),
     'plugin/$',
-    'favourites',
+    'favi',
     ''
   })
 
