@@ -12,7 +12,7 @@ In order to add a file to your favourites, you can use `FavAdd` command.
 ```viml
 :FaviAdd
 ```
-By default `$MYVIMRC` and `favourites` are inserted by favi into the favourites.
+By default `.config/nvim/init.vim` and `favourites` are inserted by favi into the favourites.
 
 ## Installation
 
