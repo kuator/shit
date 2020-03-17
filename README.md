@@ -2,6 +2,10 @@
 
 This is a simple Neovim plugin to store your favourites files and directories.
 
+## Demo
+Demo 
+![](https://user-images.githubusercontent.com/25168308/76823176-9a586700-683d-11ea-9766-ca21abaadb30.gif)
+
 ## Usage
 Plugin stores all of your favourite files in file `favi`. In order to go to one of your favourite files
 You can use `FaviEdit` command 
