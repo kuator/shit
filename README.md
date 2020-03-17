@@ -8,9 +8,13 @@ You can use `FaviEdit` command
 ```viml
 :FaviEdit <You can type only part of the query. Command will try to expand query on its own>
 ```
-In order to add a file to your favourites, you can use `FavAdd` command.
+In order to add a file to your favourites, you can use `FaviAddFile` command.
 ```viml
-:FaviAdd
+:FaviAddFile
+```
+If, instead, you want to bookmark a directory, use the following command.
+```viml
+:FaviAddDirectory
 ```
 By default `.config/nvim/init.vim` and `favi` are inserted by favi into the favourites.
 
