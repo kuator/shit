@@ -132,7 +132,7 @@ local function list_favourite_files(arglead)
     "cat " .. get_favourites_location() 
   })
   for i,v in ipairs(favourites) do
-      if string.match(v, arglead) then
+      if string.match(string.lower(v), string.lower(arglead)) then
         table.insert(result, v)
       end
     end
