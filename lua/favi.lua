@@ -31,18 +31,23 @@ local function remove_duplicates()
   vim.api.nvim_command('sort u')
 end
 
-local function add()
+local function add(action)
 
   if not favourites_exist() then
     create_favourites_file()
   end
 
   local old_win = vim.api.nvim_call_function('winnr', {})
-  -- local old_buf = vim.api.nvim_call_function('bufnr', {'%'})
 
-  filename = vim.api.nvim_call_function('expand', {
-    "%:p~"
-  })
+  if action == 1 then
+    filename = vim.api.nvim_call_function('expand', {
+      "%:p~"
+    })
+  elseif action == 2 then
+    filename = vim.api.nvim_call_function('expand', {
+      "%:p:~:h"
+    })
+  end
 
   favourites_window_id=vim.api.nvim_call_function('bufwinnr' ,{
     'favi'
@@ -52,7 +57,7 @@ local function add()
     vim.api.nvim_command(favourites_window_id..'wincmd w')
     remove_duplicates()
   else
-    vim.api.nvim_command('silent! botright 10 sp' .. get_favourites_location())
+    vim.api.nvim_command('silent! botright 10 sp ' .. get_favourites_location())
     remove_duplicates()
   end
 

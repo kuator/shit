@@ -24,6 +24,7 @@ com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviEdit lua favi.edit_fi
 com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviSplit lua favi.edit_file('split', <f-args>)
 com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviVertical lua favi.edit_file('vertical', <f-args>)
 com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviTabedit lua favi.edit_file('tabedit', <f-args>)
-com! FaviAdd lua favi.add()<cr>
+com! FaviAddFile lua favi.add(1)<cr>
+com! FaviAddDirectory lua favi.add(2)<cr>
 
 let &cpo = s:save_cpo
