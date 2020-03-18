@@ -126,24 +126,38 @@ local function init_favi()
   end
 end
 
-local function list_favourite_files(arglead)
-  local result = {}
+local function get_favourite_files()
   favourites = vim.api.nvim_call_function('systemlist', { 
     "cat " .. get_favourites_location() 
   })
+  return favourites
+end
+
+local function list_favourite_files(arglead)
+  local result = {}
+
+  favourites = get_favourite_files()
+
   for i,v in ipairs(favourites) do
-      if string.match(string.lower(v), string.lower(arglead)) then
-        table.insert(result, v)
-      end
+    if string.match(string.lower(v), string.lower(arglead)) then
+      table.insert(result, v)
     end
+  end
   return result
 end
 
 local function edit_file(command, arg)
+  favourites = get_favourite_files()
+  for i,v in ipairs(favourites) do
+    if string.match(string.lower(v), string.lower(arg)) then
+      arg = v
+    end
+  end
+
   if command == 'tabedit' then
-    vim.api.nvim_command(command .. arg .. "\\|lcd %:p:h")
+    vim.api.nvim_command(command .. ' '..  arg .. "\\|lcd %:p:h")
   else
-    vim.api.nvim_command(command .. arg)
+    vim.api.nvim_command(command .. ' ' .. arg)
   end
 end
 

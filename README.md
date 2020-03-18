@@ -3,8 +3,10 @@
 This is a simple Neovim plugin to store your favourites files and directories.
 
 ## Demo
-Demo 
-![](https://user-images.githubusercontent.com/25168308/76823176-9a586700-683d-11ea-9766-ca21abaadb30.gif)
+Here, I have blank_note folder in my favourites, I can switch to it just by typing bl.
+Favi will try to find a file/folder that contains bl in its path.
+Or you can tab through files if you want to be sure about the target folder/file
+-![](https://user-images.githubusercontent.com/25168308/76953657-45018000-6939-11ea-8e07-dac71107cbe2.gif)
 
 ## Usage
 Plugin stores all of your favourite files in file `favi`. In order to go to one of your favourite files
