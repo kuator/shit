@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+Demo	README.md	/^## Demo$/;"	s
+Favi	README.md	/^# Favi$/;"	c
+FaviAddDirectory	plugin/favi.vim	/^com! FaviAddDirectory lua favi.add(2)<cr>$/;"	c
+FaviAddFile	plugin/favi.vim	/^com! FaviAddFile lua favi.add(1)<cr>$/;"	c
+FaviEdit	plugin/favi.vim	/^com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviEdit lua favi.edit_file('edit', <f-ar/;"	c
+FaviSplit	plugin/favi.vim	/^com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviSplit lua favi.edit_file('split', <f-/;"	c
+FaviTabedit	plugin/favi.vim	/^com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviTabedit lua favi.edit_file('tabedit',/;"	c
+FaviVertical	plugin/favi.vim	/^com! -nargs=1 -complete=customlist,<sid>ListFavourites FaviVertical lua favi.edit_file('vertical/;"	c
+Installation	README.md	/^## Installation$/;"	s
+Usage	README.md	/^## Usage$/;"	s
+add	lua/favi.lua	/^local function add(action)$/;"	f
+clear_wildignore	lua/favi.lua	/^local function clear_wildignore()$/;"	f
+create_favourites_file	lua/favi.lua	/^local function create_favourites_file()$/;"	f
+duplicate	lua/favi.lua	/^  duplicate = vim.api.nvim_call_function('search', {$/;"	f
+edit_file	lua/favi.lua	/^local function edit_file(command, arg)$/;"	f
+favi	lua/favi.lua	/^  local favi = vim.api.nvim_call_function('findfile', {'plugin\/favi.vim'})$/;"	f
+favourites	lua/favi.lua	/^  favourites = vim.api.nvim_call_function('expand', {'%:p'}) $/;"	f
+favourites	lua/favi.lua	/^  favourites = vim.api.nvim_call_function('findfile', {'favi'})$/;"	f
+favourites	lua/favi.lua	/^  favourites = vim.api.nvim_call_function('systemlist', { $/;"	f
+favourites	lua/favi.lua	/^  local favourites = vim.api.nvim_call_function('substitute', {$/;"	f
+favourites_exist	lua/favi.lua	/^local function favourites_exist()$/;"	f
+favourites_window_id	lua/favi.lua	/^  favourites_window_id=vim.api.nvim_call_function('bufwinnr' ,{$/;"	f
+filename	lua/favi.lua	/^    filename = vim.api.nvim_call_function('expand', {$/;"	f
+g:loaded_favi	plugin/favi.vim	/^let g:loaded_favi = 1$/;"	v
+get_directory	lua/favi.lua	/^local function get_directory(str)$/;"	f
+get_favourite_files	lua/favi.lua	/^local function get_favourite_files()$/;"	f
+get_favourites_location	lua/favi.lua	/^local function get_favourites_location()$/;"	f
+get_original_wildignore	lua/favi.lua	/^local function get_original_wildignore()$/;"	f
+init_favi	lua/favi.lua	/^local function init_favi()$/;"	f
+list_favourite_files	lua/favi.lua	/^local function list_favourite_files(arglead)$/;"	f
+old_win	lua/favi.lua	/^  local old_win = vim.api.nvim_call_function('winnr', {})$/;"	f
+remove_duplicates	lua/favi.lua	/^local function remove_duplicates()$/;"	f
+restore_wildignore	lua/favi.lua	/^local function restore_wildignore()$/;"	f
+s:ListFavourites	plugin/favi.vim	/^fun! s:ListFavourites(ArgLead, CmdLine, CursorPos)$/;"	f
+s:save_cpo	plugin/favi.vim	/^let s:save_cpo = &cpo$/;"	v
+vim-plug	README.md	/^### vim-plug$/;"	S
+vimrc	lua/favi.lua	/^  local vimrc = vim.api.nvim_call_function('expand', {$/;"	f

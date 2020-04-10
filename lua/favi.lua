@@ -94,8 +94,14 @@ end
 local function create_favourites_file()
 
   clear_wildignore()
-  local favi = vim.api.nvim_call_function('findfile', {'favi/plugin/favi.vim'})
+  local upath =  vim.api.nvim_get_option('path')
+  local rtp = vim.api.nvim_get_option('runtimepath')
+  vim.api.nvim_set_option('path', rtp)
+  local favi = vim.api.nvim_call_function('findfile', {'plugin/favi.vim'})
+  vim.api.nvim_set_option('path', upath)
+
   restore_wildignore()
+
   local favourites = vim.api.nvim_call_function('substitute', {
     get_directory(favi),
     'plugin/$',
